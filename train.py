@@ -73,7 +73,7 @@ def compute_metrics(eval_pred):
 
 batch_size = config['batch_size']
 args = Seq2SeqTrainingArguments(
-    "/content/run1",
+    "./run",
     evaluation_strategy = "epoch",
     save_strategy="epoch",
     learning_rate=1e-5,
@@ -81,9 +81,9 @@ args = Seq2SeqTrainingArguments(
     per_device_eval_batch_size=batch_size,
     weight_decay=0.01,
     save_total_limit=3,
-    num_train_epochs=3,
+    num_train_epochs=config['epoch'],
     predict_with_generate=True,
-    generation_max_length=200,
+    generation_max_length=100,
     generation_num_beams=1,
     )
 
