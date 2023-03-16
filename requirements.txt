@@ -1,0 +1,9 @@
+pandas
+tqdm
+gdown
+datasets 
+transformers 
+rouge-score 
+nltk
+PyYAML
+torch
